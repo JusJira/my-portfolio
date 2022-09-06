@@ -1,42 +1,27 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import React, { Suspense } from 'react'
+import { VStack, Flex, Spacer } from '@chakra-ui/layout'
+import Header from './components/Header';
+import Social from './components/Social';
+// import Profile from './components/Profile'
+const Profile = React.lazy(() => import('./components/Profile'))
+
+
 
 function App() {
+
+
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <VStack p={5}>
+      <Flex w="100%">
+        <Spacer></Spacer>
+        <Header></Header>
+      </Flex>
+      <Suspense fallback={<div>Loading</div>}>
+        <Profile></Profile>
+      </Suspense>
+      <Social></Social>
+    </VStack>
   );
 }
 
-export default App;
+export default App
