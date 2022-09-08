@@ -29,14 +29,15 @@ import {
             w={'full'}
             src={img}
             objectFit={'cover'}
+            alt='Work code photo'
           />
   
           <Box p={6}>
             <Stack spacing={0} align={'center'} mb={5}>
-              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'} color={useColorModeValue('blue.900', 'blue.100')}>
                 {project}
               </Heading>
-              <Text color={'gray.500'}>{description}</Text>
+              <Text color={useColorModeValue('gray.900', 'gray.200')}>{description}</Text>
             </Stack>
 
             <Button
