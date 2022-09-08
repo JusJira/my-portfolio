@@ -1,10 +1,9 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { VStack, Flex, Spacer } from '@chakra-ui/layout'
 import Header from './components/Header';
 import Social from './components/Social';
-// import Profile from './components/Profile'
-const Profile = React.lazy(() => import('./components/Profile'))
-
+import Profile from './components/Profile'
+import Work from './components/Work'
 
 
 function App() {
@@ -16,9 +15,8 @@ function App() {
         <Spacer></Spacer>
         <Header></Header>
       </Flex>
-      <Suspense fallback={<div>Loading</div>}>
-        <Profile></Profile>
-      </Suspense>
+      <Profile></Profile>
+      <Work></Work>
       <Social></Social>
     </VStack>
   );

@@ -29,7 +29,7 @@ function Profile() {
                 <Image alignSelf="center" mt={isNotSmallerScreen ? "0" : "12"}
                     mb={isNotSmallerScreen ? "0" : "12"} borderRadius={isNotSmallerScreen ? 'full' : '25px 25px'}
                     backgroundColor="transparent" boxShadow={colorMode === 'dark' ? 'lg' : 'sm'}
-                    boxSize="300" objectFit='none' src='/profile.webp' alt='Profile Image' fallbackSrc='https://via.placeholder.com/300' loading='eager'/>
+                    boxSize="300" objectFit='none' src='/profile.webp' alt='Profile Image' loading='eager'/>
             </Flex>
         </Stack>
     )
