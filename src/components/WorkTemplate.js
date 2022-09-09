@@ -14,7 +14,6 @@ import {
     const description = props.desc;
     const link = props.link;
     const img = '/images/' + props.imgfile +'.png';
-    console.log(img)
     return (
       <Center py={6}>
         <Box
