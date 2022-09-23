@@ -5,7 +5,7 @@ const theme = extendTheme({
       global: {
         body: {
           transitionProperty: "background-color",
-          transitionDuration: "600ms"
+          transitionDuration: "200ms"
         }
       }
     },
